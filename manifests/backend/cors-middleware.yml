@@ -1,0 +1,17 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: cors-promiscuous
+  namespace: courses
+spec:
+  headers:
+    accessControlAllowMethods:
+      - "GET"
+      - "OPTIONS"
+      - "PUT"
+      - "POST"
+      - "DELETE"
+    accessControlAllowOriginList: 
+      - "*"
+    accessControlMaxAge: 100
+    addVaryHeader: true

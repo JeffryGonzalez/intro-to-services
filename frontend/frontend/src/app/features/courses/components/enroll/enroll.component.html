@@ -1,0 +1,25 @@
+<div *ngIf="course$ | async as course">
+  <div class="card">
+    <div class="card-header">Enroll for {{ course.title }}</div>
+    <div class="card-body">
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input class="form-control" formControlName="name" />
+        </div>
+        <div class="form-group">
+          <label for="dateOfCourse">Date of Course</label>
+          <select class="form-control" formControlName="dateOfCourse">
+            <option>THIS IS OUR JOB</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="course"> Course </label>
+          <input disabled class="form-control" value="{{ course.title }}" />
+          <input type="hidden" formControlName="course" />
+        </div>
+        <button type="submit" class="btn btn-success">Enroll Now!</button>
+      </form>
+    </div>
+  </div>
+</div>

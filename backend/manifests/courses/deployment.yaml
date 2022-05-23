@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: courses-api
+  namespace: courses
+spec:
+  selector:
+    matchLabels:
+      app: courses-api
+  template:
+    metadata:
+      labels:
+        app: courses-api
+    spec:
+      containers:
+      - name: courses-api
+        image: jeffrygonzalez/beginning-services-courses:v1.0
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+        env:
+          - name: MongoDbConnection__ConnectionString
+            value: mongodb://root:TokyoJoe138!@mongodb.data.svc.cluster.local:27017/
+          - name: MongoDbConnection__Database
+            value: courses_db
+          - name: MongoDbConnection__Collection
+            value: courses
+          - name: ASPNETCORE_ENVIRONMENT
+            value: Development

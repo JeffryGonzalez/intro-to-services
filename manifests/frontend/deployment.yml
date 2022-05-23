@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: courses-frontend
+  namespace: courses
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: courses-frontend
+  template:
+    metadata:
+      labels:
+        app: courses-frontend
+    spec:
+      containers:
+        - name: courses-frontend
+          image: jeffrygonzalez/beginning-services-frontend:v1.0
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 80
