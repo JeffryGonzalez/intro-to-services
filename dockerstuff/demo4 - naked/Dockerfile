@@ -1,4 +1,5 @@
 FROM ubuntu:20.04 as build 
+# Set this up to use Artifactory 
 RUN apt-get update && apt-get install -y  build-essential
 WORKDIR /app
 COPY src/hello.c /app/

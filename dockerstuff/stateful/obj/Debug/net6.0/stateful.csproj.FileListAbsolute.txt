@@ -1,0 +1,15 @@
+C:\dev\intro-to-services\dockerstuff\stateful\bin\Debug\net6.0\stateful.exe
+C:\dev\intro-to-services\dockerstuff\stateful\bin\Debug\net6.0\stateful.deps.json
+C:\dev\intro-to-services\dockerstuff\stateful\bin\Debug\net6.0\stateful.runtimeconfig.json
+C:\dev\intro-to-services\dockerstuff\stateful\bin\Debug\net6.0\stateful.dll
+C:\dev\intro-to-services\dockerstuff\stateful\bin\Debug\net6.0\stateful.pdb
+C:\dev\intro-to-services\dockerstuff\stateful\obj\Debug\net6.0\stateful.csproj.AssemblyReference.cache
+C:\dev\intro-to-services\dockerstuff\stateful\obj\Debug\net6.0\stateful.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\intro-to-services\dockerstuff\stateful\obj\Debug\net6.0\stateful.AssemblyInfoInputs.cache
+C:\dev\intro-to-services\dockerstuff\stateful\obj\Debug\net6.0\stateful.AssemblyInfo.cs
+C:\dev\intro-to-services\dockerstuff\stateful\obj\Debug\net6.0\stateful.csproj.CoreCompileInputs.cache
+C:\dev\intro-to-services\dockerstuff\stateful\obj\Debug\net6.0\stateful.dll
+C:\dev\intro-to-services\dockerstuff\stateful\obj\Debug\net6.0\refint\stateful.dll
+C:\dev\intro-to-services\dockerstuff\stateful\obj\Debug\net6.0\stateful.pdb
+C:\dev\intro-to-services\dockerstuff\stateful\obj\Debug\net6.0\stateful.genruntimeconfig.cache
+C:\dev\intro-to-services\dockerstuff\stateful\obj\Debug\net6.0\ref\stateful.dll
