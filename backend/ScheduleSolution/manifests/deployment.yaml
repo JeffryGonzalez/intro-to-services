@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: schedule-api
+  namespace: tacos
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: schedule-api
+  template:
+    metadata:
+      labels:
+        app: schedule-api
+    spec:
+      containers:
+      - name: schedule-api
+        image: scheduleapi:v0.1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+ 
