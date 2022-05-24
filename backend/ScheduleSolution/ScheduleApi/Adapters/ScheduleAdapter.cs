@@ -15,19 +15,20 @@ public class ScheduleAdapter
 
         string json = sr.ReadToEnd();
         var items = JsonSerializer.Deserialize<List<StoredScheduleItem>>(json);
-        if (items != null) {
+        if (items != null)
+        {
             foreach (var item in items)
             {
-                if (!_items.ContainsKey(item.Id))
+                if (!_items.ContainsKey(item.id))
                 {
-                    _items.Add(item.Id, new List<ScheduleItem>());
+                    _items.Add(item.id, new List<ScheduleItem>());
                 }
                 var newItem = new ScheduleItem
                 {
                     StartDate = DateTime.Parse(item.StartDate),
                     EndDate = DateTime.Parse(item.EndDate)
                 };
-                _items[item.Id].Add(newItem);
+                _items[item.id].Add(newItem);
             }
         }
     }
@@ -39,14 +40,21 @@ public class ScheduleAdapter
 
     public async Task<List<ScheduleItem>>? GetForClass(string id)
     {
-        return _items[id];
+        if (!_items.ContainsKey(id))
+        {
+            return null;
+        }
+        else
+        {
+            return _items[id];
+        }
     }
 
-
+}
 
 public class StoredScheduleItem
 {
-    public string Id { get; set; } = string.Empty;
+    public string id { get; set; } = string.Empty;
     public string Title { get; set; } = string.Empty;
     public string StartDate { get; set; } = string.Empty;
     public string EndDate { get; set; } = string.Empty;
