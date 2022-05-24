@@ -1,0 +1,98 @@
+[
+  {
+    "id": "62797b1a1823357feb3756ac",
+    "title": "Angular State Management",
+    "Start Date": "6/7/2022",
+    "End Date": "6/10/2022"
+  },
+  {
+    "id": "627994291823357feb3756ae",
+    "title": "Angular Developer Testing",
+    "Start Date": "6/13/2022",
+    "End Date": "6/16/2022"
+  },
+  {
+    "id": "627994411823357feb3756b0",
+    "title": "Advanced Angular",
+    "Start Date": "6/20/2022",
+    "End Date": "6/23/2022"
+  },
+  {
+    "id": "627994871823357feb3756b2",
+    "title": "Beginning Service Development",
+    "Start Date": "6/27/2022",
+    "End Date": "6/30/2022"
+  },
+  {
+    "id": "627994a81823357feb3756b4",
+    "title": "Web APIs with .NETt",
+    "Start Date": "7/4/2022",
+    "End Date": "7/7/2022"
+  },
+  {
+    "id": "627994cc1823357feb3756b6",
+    "title": "Microservices",
+    "Start Date": "7/11/2022",
+    "End Date": "7/14/2022"
+  },
+  {
+    "id": "627994e21823357feb3756b8",
+    "title": "Services Testing",
+    "Start Date": "7/18/2022",
+    "End Date": "7/21/2022"
+  },
+  {
+    "id": "627994fa1823357feb3756ba",
+    "title": "Event-Driven Services",
+    "Start Date": "7/25/2022",
+    "End Date": "7/28/2022"
+  },
+  {
+    "id": "62797b1a1823357feb3756ac",
+    "title": "Angular State Management",
+    "Start Date": "8/1/2022",
+    "End Date": "8/4/2022"
+  },
+  {
+    "id": "627994291823357feb3756ae",
+    "title": "Angular Developer Testing",
+    "Start Date": "8/8/2022",
+    "End Date": "8/11/2022"
+  },
+  {
+    "id": "627994411823357feb3756b0",
+    "title": "Advanced Angular",
+    "Start Date": "8/15/2022",
+    "End Date": "8/18/2022"
+  },
+  {
+    "id": "627994871823357feb3756b2",
+    "title": "Beginning Service Development",
+    "Start Date": "8/22/2022",
+    "End Date": "8/25/2022"
+  },
+  {
+    "id": "627994a81823357feb3756b4",
+    "title": "Web APIs with .NETt",
+    "Start Date": "8/29/2022",
+    "End Date": "9/1/2022"
+  },
+  {
+    "id": "627994cc1823357feb3756b6",
+    "title": "Microservices",
+    "Start Date": "9/5/2022",
+    "End Date": "9/8/2022"
+  },
+  {
+    "id": "627994e21823357feb3756b8",
+    "title": "Services Testing",
+    "Start Date": "9/12/2022",
+    "End Date": "9/15/2022"
+  },
+  {
+    "id": "627994fa1823357feb3756ba",
+    "title": "Event-Driven Services",
+    "Start Date": "9/19/2022",
+    "End Date": "9/22/2022"
+  }
+]
