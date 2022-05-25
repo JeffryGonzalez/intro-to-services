@@ -13,6 +13,7 @@ spec:
       labels:
         app: courses-frontend
     spec:
+
       containers:
         - name: courses-frontend
           image: jeffrygonzalez/beginning-services-frontend:v1.0
