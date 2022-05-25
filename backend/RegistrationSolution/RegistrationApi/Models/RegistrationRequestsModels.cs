@@ -21,3 +21,8 @@ public record RegistrationRequest
     [Required]
     public string Course { get; init; } = string.Empty;
 }
+
+
+public record RegistrationRequestResponse(string registrationId, RegistrationStatus status, RegistrationRequest request );
+
+public enum RegistrationStatus { Approved, Pending, Denied};

@@ -1,5 +1,6 @@
 ﻿using HypertheoryApiUtils;
 using RegistrationApi.Adapters;
+using RegistrationApi.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 // Routing
@@ -9,6 +10,15 @@ builder.Services.AddRouting(options =>
     options.ConstraintMap.Add("bsonid", typeof(BsonIdConstraint));
 });
 
+
+builder.Services.AddTransient<IProcessReservations, ReservationProcessor>();
+
+builder.Services.AddHttpClient<ScheduleApiAdapter>(httpClient =>
+{
+    httpClient.DefaultRequestHeaders.Add("User-Agent", "RegistrationApi");
+    var apiUrl = builder.Configuration.GetValue<string>("scheduleApiUrl");
+    httpClient.BaseAddress = new Uri(apiUrl);
+});
 // Config and Options
 builder.Services.Configure<MongoConnectionOptions>(builder.Configuration.GetSection(MongoConnectionOptions.SectionName));
 // Add services to the container.
