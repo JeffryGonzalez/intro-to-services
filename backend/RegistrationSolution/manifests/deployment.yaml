@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reservations-api
+  namespace: courses
+spec:
+  selector:
+    matchLabels:
+      app: reservations-api
+      
+  template:
+    metadata:
+      labels:
+        app: reservations-api
+    spec:
+      containers:
+      - name: reservations-api
+        image: registrationsapi:v1.0
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: "75Mi"
+            cpu: "125m"
+        ports:
+        - containerPort: 80
+        env:
+          - name: scheduleApiUrl
+            value: "http://schedule-api-service"
+          - name: schedulePath
+            value: ""
+          - name: MongoDbConnection__ConnectionString
+            value: mongodb://root:TokyoJoe138!@mongodb.data.svc.cluster.local:27017/
+          - name: MongoDbConnection__Collection
+            value: registrations
+          - name: MongoDbConnection__Database
+            value: registrations_db
+
+

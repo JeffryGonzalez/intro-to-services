@@ -24,7 +24,7 @@ builder.Services.AddHttpClient<ScheduleApiAdapter>(httpClient =>
 builder.Services.Configure<MongoConnectionOptions>(builder.Configuration.GetSection(MongoConnectionOptions.SectionName));
 // Add services to the container.
 
-builder.Services.AddSingleton<GenericMongoAdapter>();
+builder.Services.AddSingleton<RegistrationsAdapter>();
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
