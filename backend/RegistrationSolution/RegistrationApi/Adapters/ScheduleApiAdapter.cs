@@ -3,16 +3,18 @@
 public class ScheduleApiAdapter
 {
     private readonly HttpClient _httpClient;
+    private IConfiguration _config;
 
-    public ScheduleApiAdapter(HttpClient httpClient)
+    public ScheduleApiAdapter(HttpClient httpClient, IConfiguration config)
     {
         _httpClient = httpClient;
-
+        _config = config;
     }
 
     public async Task<CourseScheduleResponse>? GetScheduleForCourseAsync(string courseId)
     {
-        var response = await _httpClient.GetAsync($"/schedule/{courseId}");
+        var path = _config.GetValue < string > ("schedulePath");
+        var response = await _httpClient.GetAsync($"{path}/schedule/{courseId}");
         if(response.StatusCode == System.Net.HttpStatusCode.NotFound)
         {
             return null;

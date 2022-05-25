@@ -1,4 +1,5 @@
-﻿using HypertheoryApiUtils;
+﻿using System.Text.Json.Serialization;
+using HypertheoryApiUtils;
 using RegistrationApi.Adapters;
 using RegistrationApi.Domain;
 
@@ -25,7 +26,10 @@ builder.Services.Configure<MongoConnectionOptions>(builder.Configuration.GetSect
 
 builder.Services.AddSingleton<GenericMongoAdapter>();
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
